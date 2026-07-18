@@ -33,6 +33,10 @@ app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
 
+app.get("/", (req, res) => {
+    res.send("GoAjira API is running");
+});
+
 
 app.listen(PORT,()=>{
     connectDB();
